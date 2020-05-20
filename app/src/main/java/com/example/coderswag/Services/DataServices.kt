@@ -17,24 +17,48 @@ object DataServices {
     )
 
     val hats = listOf(
-        Product("Henry's Graphic Beanie ", "180 Rs", "hat01"),
-        Product("Henry's Hat Black ", "200 Rs", "hat02"),
-        Product("Henry's Hat White ", "220 Rs", "hat03"),
-        Product("Henry's Hat Snapback ", "190 Rs", "hat04")
+        Product("Henry's Graphic Beanie ", "180 Rs", "hat1"),
+        Product("Henry's Hat Black ", "200 Rs", "hat2"),
+        Product("Henry's Hat White ", "220 Rs", "hat3"),
+        Product("Henry's Hat Snapback ", "190 Rs", "hat4"),
+        Product("Henry's Graphic Beanie ", "180 Rs", "hat1"),
+        Product("Henry's Hat Black ", "200 Rs", "hat2"),
+        Product("Henry's Hat White ", "220 Rs", "hat3"),
+        Product("Henry's Hat Snapback ", "190 Rs", "hat4")
     )
 
     val hoodies = listOf(
-        Product("Henry's Gray Hoodie", "250 Rs","hoodie01"),
-        Product("Henry's Red Hoodie", "280 Rs","hoodie02"),
-        Product("Henry's Gray Hoodie", "270 Rs","hoodie03"),
-        Product("Henry's Black Hoodie", "300 Rs","hoodie04")
+        Product("Henry's Gray Hoodie", "250 Rs","hoodie1"),
+        Product("Henry's Red Hoodie", "280 Rs","hoodie2"),
+        Product("Henry's Gray Hoodie", "270 Rs","hoodie3"),
+        Product("Henry's Black Hoodie", "300 Rs","hoodie4"),
+        Product("Henry's Gray Hoodie", "250 Rs","hoodie1"),
+        Product("Henry's Red Hoodie", "280 Rs","hoodie2"),
+        Product("Henry's Gray Hoodie", "270 Rs","hoodie3"),
+        Product("Henry's Black Hoodie", "300 Rs","hoodie4")
     )
 
     val shirts = listOf(
-        Product("Henry's Black Shirt", "300 Rs", "shirt01"),
-        Product("Henry's Badge Light Gray Shirt", "300 Rs", "shirt01"),
-        Product("Henry's Red Logo Shirt", "300 Rs", "shirt01"),
-        Product("Henry's Hustle", "300 Rs", "shirt01"),
-        Product("KickFlip studios", "300 Rs", "shirt01")
+        Product("Henry's Black Shirt", "300 Rs", "shirt1"),
+        Product("Henry's Badge Light Gray Shirt", "300 Rs", "shirt2"),
+        Product("Henry's Red Logo Shirt", "300 Rs", "shirt3"),
+        Product("Henry's Hustle", "300 Rs", "shirt4"),
+        Product("KickFlip studios", "300 Rs", "shirt5"),
+        Product("Henry's Black Shirt", "300 Rs", "shirt1"),
+        Product("Henry's Badge Light Gray Shirt", "300 Rs", "shirt2"),
+        Product("Henry's Red Logo Shirt", "300 Rs", "shirt3"),
+        Product("Henry's Hustle", "300 Rs", "shirt4"),
+        Product("KickFlip studios", "300 Rs", "shirt5")
     )
+
+    val digitalGood = listOf<Product>()
+
+    fun getProducts(category: String) : List<Product> {
+        return when (category){
+            "SHIRTS" -> shirts
+            "HATS" -> hats
+            "HOODIES" -> hoodies
+            else -> digitalGood
+        }
+    }
 }
